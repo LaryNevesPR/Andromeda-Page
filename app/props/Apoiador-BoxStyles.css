@@ -1,0 +1,64 @@
+/* Css da caixa de Apoiadores */
+
+.apoiadores-container {
+    background:var(--card);backdrop-filter: blur(6px);
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.apoiadores-titulo {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 18px; /* Espaçamento entre os apoiadores */
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px; /* Largura do item completo */
+}
+
+.logo-box {
+    width: 60px;
+    height: 60px;
+    /* background: linear-gradient(to bottom right,#10e3c7, #e06ede, #c008d1);  //Ficou bontio, mas um pouco estranho  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 3px solid slategray;
+    border-radius: 50%;
+    overflow: hidden; /* Vazado fica estiloso também */
+}
+
+.logo-imagem {
+    width: 60px; /* 15px * 4 = 60px */
+    height: 60px; /* 15px * 4 = 60px */
+
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges;
+
+    /* max-width: none; */
+    /* max-height: none; */
+}
+
+.logo-texto {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin: 0;
+}

@@ -1,103 +1,87 @@
 import Image from "next/image";
+import StatusBox from '@/app/props/StatusBox';
+import ServerStatusBox from "@/app/props/ServerStatusBox";
+import Apoiadores from '@/app/props/Apoiador-Box';
+
+// Apoiadores
+import LunaImg from '@/app/resources/imgs/luna_figure2.png';
+import GuiImg from '@/app/resources/imgs/Gui_figure2.png';
+import JanieImg from '@/app/resources/imgs/Janie_figure2.png';
+import GertulioImg from '@/app/resources/imgs/Gertulio_figure2.png';
+import LaoImg from '@/app/resources/imgs/Lao_figure2.png';
+import LawImg from '@/app/resources/imgs/Law_figure2.png';
+import PaxImg from '@/app/resources/imgs/Pax_figure2.png';
+import PhilImg from '@/app/resources/imgs/Phil_figure2.png';
+import PodroImg from '@/app/resources/imgs/Podro_figure2.png';
+import RonaldoImg from '@/app/resources/imgs/ronaldo_figure2.png';
+import WellsImg from '@/app/resources/imgs/wells_figure2.png';
+
 
 export default function Home() {
+    const meusApoiadores = [
+        { logo: GertulioImg.src, nome: 'Gertulio Quietude'},
+        { logo: GuiImg.src, nome: 'Guilherme Carneiro Mendes'},
+        { logo: JanieImg.src, nome: 'Janie Smith Coelho da Silva'},
+        { logo: LaoImg.src, nome: 'Lao Tsung'},
+        { logo: LunaImg.src, nome: 'Lunara Gooben'},
+        { logo: LawImg.src, nome: 'Law Law'},
+        { logo: PaxImg.src, nome: 'Pax Kally'},
+        { logo: PhilImg.src, nome: 'Phil-Mal'},
+        { logo: PodroImg.src, nome: 'Podro Coelho da Silva'},
+        { logo: RonaldoImg.src, nome: 'Renomado Ronaldo Raimundo'},
+        { logo: WellsImg.src, nome: 'Wells Chaplon'},
+    ];
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      <div className="wrap">
+          <header>
+              <div className="logo">
+                  <div className="logo-mark">LOGO</div>
+                  <div>
+                      <div className="logo-name">Bem-vindo(a)</div>
+                      <div className="small">Você parece legal • Olá</div>
+                  </div>
+              </div>
+              <nav>
+                  <a className="small" href="#">Entrar</a>
+              </nav>
+          </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <main className="main">
+              <div>
+                  <h1 className="title" data-text="ESTAÇÃO ANDRÔMEDA">ESTAÇÃO ANDRÔMEDA</h1>
+                  <p className="subtitle"> BR | MRP+ | Para quem de fato gosta de Roleplay</p>
+
+                  <div className="panel">
+                      <div className="info">
+                          <div className="ip">ss14://estacaoandromeda.xyz:1212</div>
+                          <a className="btn btn-join">Jogar</a>
+                          <a className="btn btn-ghost" target='_blank' href='https://discord.com/invite/FPq47bAZup' >Discord</a>
+                      </div>
+                      <p className="small" style={{marginTop: 12}}>Dica: use <span>Ahelp</span> para chamar a staff.</p>
+                  </div>
+              </div>
+
+              <aside className="side">
+                  <ServerStatusBox />
+
+                  <StatusBox
+                      title="Próximo evento"
+                      content="Circo Day — 2/nov • 14:00"
+                  />
+                  <a href="https://wiki.estacaoandromeda.xyz">
+                  <StatusBox
+                      title="Wiki"
+                      content="Veja a nossa Wiki e aprenda mais sobre o jogo."
+                  />
+                  </a>
+              </aside>
+          </main>
+
+          <Apoiadores titulo="Apoiadores" listaApoiadores={meusApoiadores} />
+
+          <footer>
+              © Estação Andrômeda e comunidade - 2025 • versão alpha
+          </footer>
+      </div>
   );
 }
