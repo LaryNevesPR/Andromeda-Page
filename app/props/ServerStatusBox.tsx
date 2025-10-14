@@ -31,7 +31,7 @@ interface ApiServer {
 }
 
 // Definição das constantes
-const TARGET_ADDRESS = 'ss14://frontier.estacaoandromeda.xyz:1215';
+const TARGET_ADDRESS = 'ss14://server.estacaoandromeda.xyz:1212';
 const API_URL = 'https://hub.spacestation14.com/api/servers';
 const REFRESH_INTERVAL_MS = 30000; // Recarrega a cada 30 segundos
 
@@ -48,7 +48,7 @@ const ServerStatusBox: React.FC = () => {
         {
             const response = await fetch(API_URL);
             if (!response.ok) {
-                throw new Error(`Erro HTTP! status: ${response.status}`);
+                new Error(`Erro HTTP! status: ${response.status}`);
             }
 
             const servers: ApiServer[] = await response.json();

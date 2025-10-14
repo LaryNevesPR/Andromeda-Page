@@ -1,4 +1,3 @@
-import Image from "next/image";
 import StatusBox from '@/app/props/StatusBox';
 import ServerStatusBox from "@/app/props/ServerStatusBox";
 import Apoiadores from '@/app/props/Apoiador-Box';
