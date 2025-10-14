@@ -53,7 +53,7 @@ export default function Home() {
                   <div className="panel">
                       <div className="info">
                           <div className="ip">ss14://estacaoandromeda.xyz:1212</div>
-                          <a className="btn btn-join">Jogar</a>
+                          <a className="btn btn-join" href='ss14://estacaoandromeda.xyz:1212'>Jogar</a>
                           <a className="btn btn-ghost" target='_blank' href='https://discord.com/invite/FPq47bAZup' >Discord</a>
                       </div>
                       <p className="small" style={{marginTop: 12}}>Dica: use <span>Ahelp</span> para chamar a staff.</p>
