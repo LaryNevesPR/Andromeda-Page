@@ -25,6 +25,7 @@ body{
 header{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px}
 .logo{display:flex;gap:12px;align-items:center}
 .logo-mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--magenta));display:flex;align-items:center;justify-content:center;font-weight:700;}
+.logo-mark img{height:44px;width:80px;border-radius:10px;}
 .logo-name{font-weight:700;letter-spacing:0.6px}
 
 /* Main centro */

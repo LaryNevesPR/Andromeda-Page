@@ -1,6 +1,8 @@
 import StatusBox from '@/app/props/StatusBox';
 import ServerStatusBox from "@/app/props/ServerStatusBox";
 import Apoiadores from '@/app/props/Apoiador-Box';
+import AndromedaLogo from '@/public/AndromedaLogo.png';
+import Image from "next/image";
 
 // Apoiadores
 import LunaImg from '@/app/resources/imgs/luna_figure2.png';
@@ -34,7 +36,7 @@ export default function Home() {
       <div className="wrap">
           <header>
               <div className="logo">
-                  <div className="logo-mark">LOGO</div>
+                  <div className="logo-mark"><Image src={AndromedaLogo} alt={'Teste'}/></div>
                   <div>
                       <div className="logo-name">Bem-vindo(a)</div>
                       <div className="small">Você parece legal • Olá</div>
